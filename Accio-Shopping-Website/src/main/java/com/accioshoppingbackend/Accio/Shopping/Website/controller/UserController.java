@@ -1,6 +1,5 @@
 package com.accioshoppingbackend.Accio.Shopping.Website.controller;
 
-import com.accioshoppingbackend.Accio.Shopping.Website.model.ApplicationUser;
 import com.accioshoppingbackend.Accio.Shopping.Website.service.UserService;
 import org.springframework.web.bind.annotation.*;
 

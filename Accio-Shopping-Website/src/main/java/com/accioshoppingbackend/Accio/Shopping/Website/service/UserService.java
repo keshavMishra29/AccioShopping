@@ -1,6 +1,5 @@
 package com.accioshoppingbackend.Accio.Shopping.Website.service;
 
-import com.accioshoppingbackend.Accio.Shopping.Website.model.ApplicationUser;
 import com.accioshoppingbackend.Accio.Shopping.Website.repository.UserRepository;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,5 @@
 package com.accioshoppingbackend.Accio.Shopping.Website.repository;
 
-import com.accioshoppingbackend.Accio.Shopping.Website.model.ApplicationUser;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
