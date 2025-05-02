@@ -13,6 +13,6 @@ public class Student {
     int id;
     String name;
     String course;
-    @OneToMany(mappedBy = "users")
+    @OneToMany(mappedBy = "user")
     List<Laptop> laptopList;
 }
