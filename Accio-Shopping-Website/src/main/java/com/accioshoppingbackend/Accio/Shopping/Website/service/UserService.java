@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
         //We need to tell Springboot, hey this class is service class
+    // This service layer is to perform all CRUD related operations
 
     private UserRepository userRepository = new UserRepository();
     public void createUser(ApplicationUser applicationUser){
@@ -22,5 +23,8 @@ public class UserService {
     }
     public void updateUserByEmail(ApplicationUser applicationUser, String email){
         userRepository.updateUser(email, applicationUser);
+    }
+    public void deleteUser(String email){
+        userRepository.deleteUser(email);
     }
 }
