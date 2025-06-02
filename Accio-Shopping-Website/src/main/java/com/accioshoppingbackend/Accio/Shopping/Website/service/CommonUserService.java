@@ -20,7 +20,7 @@ public class CommonUserService {
 
         AppUser user = userRepository.findByEmail(userEmail);
         if (user == null){
-            throw new UserNotFound(String.format("User with %s does not exist in system", userEmail));
+            throw new UserNotFound(String.format("User with email %s does not exist in system", userEmail));
         }
         String originalPassword = user.getPassword();
         if (originalPassword.equals(userPassword)){
@@ -31,6 +31,13 @@ public class CommonUserService {
     public AppUser getUserById(UUID userID){
         AppUser user = userRepository.findById(userID).orElse(null);
         return user;
+    }
+    public Boolean isSeller(UUID sellerID){
+        AppUser user = getUserById(sellerID);
+        if (user == null){
+            return null;
+        }
+        return user.getUserType().equals("SELLER");
     }
     public void registerUser(AppUser user){
         userRepository.save(user);
